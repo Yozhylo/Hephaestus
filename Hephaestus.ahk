@@ -1,6 +1,15 @@
-; Hephaestus v0.9.0
+; Hephaestus v1.0.0
+
+;@Ahk2Exe-AddResource icon.ico, RT_GROUP_ICON
+;@Ahk2Exe-SetMainIcon icon.ico
+;@Ahk2Exe-SetLanguage 0x0009
+;@Ahk2Exe-SetVersion 1.0.0
+;@Ahk2Exe-SetName Hephaestus
+;@Ahk2Exe-SetDescription GW2 Mystic Forge macro
+
 #Requires AutoHotkey v2.0
 #SingleInstance
+TraySetIcon "icon.ico"
 
 ; Variables start
 mousePosX := []
