@@ -39,6 +39,13 @@ F2::
   setPosition("Button", 5)
 }
 
+; rem: MAKE YOUR OWN INPUT WITH GUI OBJECT
+; INSTEAD OF USING THIS CRUTCH
+!F3::
+{
+  global repetitions := InputBox("Enter the number of repetitions").Value
+}
+
 ; Execute @ positions
 F3::
 {
