@@ -70,5 +70,5 @@ F1::
   , "Interact Positions", "iconi"
 }
 
-F5:: Reload
+ESC:: Reload
 F4:: ExitApp 0

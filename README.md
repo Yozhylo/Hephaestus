@@ -12,4 +12,4 @@
 | <kbd>F2</kbd> | Set / Reset the locations of items & button |
 | <kbd>F3</kbd> | Start macro execution |
 | <kbd>F4</kbd> | Exit macro |
-| <kbd>F5</kbd> | Stop macro execution / Reload script |
+| <kbd>ESC</kbd> | Stop macro execution / Reload script |
