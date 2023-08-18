@@ -8,8 +8,8 @@
 
 | Hotkey | Action |
 |---|---|
-| <kbd>F1</kbd> | Set / Reset the locations of items & button |
-| <kbd>F2</kbd> | Start macro execution |
-| <kbd>F3</kbd> | View raw coordinates of interaction locations |
+| <kbd>F1</kbd> | View raw coordinates of interaction locations |
+| <kbd>F2</kbd> | Set / Reset the locations of items & button |
+| <kbd>F3</kbd> | Start macro execution |
 | <kbd>F4</kbd> | Exit macro |
-| <kbd>ESC</kbd> | Stop macro execution / Reload script |
+| <kbd>F5</kbd> | Stop macro execution / Reload script |

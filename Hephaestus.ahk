@@ -13,7 +13,7 @@ repetitions := 40
 #HotIf WinActive("Guild Wars 2")
 
 ; Setting positions
-F1::
+F2::
 {
   ; Need to add functions here
   ; Need to add error catching
@@ -35,7 +35,7 @@ F1::
 }
 
 ; Execute @ positions
-F2::
+F3::
 {
   BlockInput "MouseMove"
   Loop repetitions
@@ -54,7 +54,7 @@ F2::
 }
 
 ; See positions
-F3::
+F1::
 {
   ; Needs a rework, too much clutter
   MsgBox "1st X: " . mousePosX[1] . 
@@ -70,5 +70,5 @@ F3::
   , "Interact Positions", "iconi"
 }
 
-ESC:: Reload
+F5:: Reload
 F4:: ExitApp 0
