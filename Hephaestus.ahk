@@ -8,30 +8,26 @@ mousePosY := []
 ; Need to allow user to select amount of repetitions
 repetitions := 40
 ; Variables end
-
+; Functions start
+setPosition(tooltipTitle, tooltipIndex)
+{
+  KeyWait "LButton", "D"
+  KeyWait "LButton"
+  MouseGetPos &xpos, &ypos
+  mousePosX.Push(xpos)
+  mousePosY.Push(ypos)
+  ToolTip  tooltipTitle, xpos - 28, ypos - 20, tooltipIndex
+}
+; Functions end
 ; Making script work only with GW2 in focus
 #HotIf WinActive("Guild Wars 2")
 
 ; Setting positions
 F2::
 {
-  ; Need to add functions here
-  ; Need to add error catching
   Loop 4
-  {
-    KeyWait "LButton", "D"
-    KeyWait "LButton"
-    MouseGetPos &xpos, &ypos
-    mousePosX.Push(xpos)
-    mousePosY.Push(ypos)
-    ToolTip  "Item #" . A_Index, xpos - 28, ypos - 20, A_Index
-  }
-  KeyWait "LButton", "D"
-  KeyWait "LButton"
-  MouseGetPos &xpos, &ypos
-  mousePosX.Push(xpos)
-  mousePosY.Push(ypos)
-  ToolTip "Button", xpos - 28, ypos - 20, 5
+  setPosition("Item #" . A_Index, A_Index)
+  setPosition("Button", 5)
 }
 
 ; Execute @ positions
