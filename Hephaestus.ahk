@@ -33,37 +33,52 @@ F2::
 ; Execute @ positions
 F3::
 {
-  BlockInput "MouseMove"
-  Loop repetitions
+  If (mousePosX.Length = 5 && mousePosY.Length = 5)
   {
-    Loop 4
-    MouseClick "Left", mousePosX[A_Index], mousePosY[A_Index], 2, 50
-    
-    MouseClick "Left", mousePosX[5], mousePosY[5], 2, 50
-    SendInput "F"
-    ; Waiting for Mystic Forge button to become active
-    ; Needs testing to find out the smallest delay
-    Sleep 500
+    BlockInput "MouseMove"
+    Loop repetitions
+    {
+      Loop 4
+      MouseClick "Left", mousePosX[A_Index], mousePosY[A_Index], 2, 50
+      
+      MouseClick "Left", mousePosX[5], mousePosY[5], 2, 50
+      SendInput "F"
+      ; Waiting for Mystic Forge button to become active
+      ; Needs testing to find out the smallest delay
+      Sleep 500
+    }
+    BlockInput "MouseMoveOff"
+    MsgBox "Finished", "!", "T3 icon!"
   }
-  BlockInput "MouseMoveOff"
-  MsgBox "Finished", "!", "T3 icon!"
+  Else
+  {
+    MsgBox "Please set the positions to continue", "WARNING", "icon!"
+  }
 }
 
 ; See positions
 F1::
 {
-  ; Needs a rework, too much clutter
-  MsgBox "1st X: " . mousePosX[1] . 
-  "`t1st Y: " . mousePosY[1] . 
-  "`n2nd X: " . mousePosX[2] . 
-  "`t2nd Y: " . mousePosY[2] . 
-  "`n3rd X: " . mousePosX[3] . 
-  "`t3rd Y: " . mousePosY[3] .
-  "`n4th X: " . mousePosX[4] . 
-  "`t4th Y: " . mousePosY[4] .
-  "`n5th X: " . mousePosX[5] . 
-  "`t5th Y: " . mousePosY[5]
-  , "Interact Positions", "iconi"
+  If (mousePosX.Length = 5 && mousePosY.Length = 5)
+  {
+    ; Needs a rework, too much clutter
+    MsgBox "The positions of interaction:" .
+    "`n`n1st X: " . mousePosX[1] . 
+    "`tY: " . mousePosY[1] . 
+    "`n2nd X: " . mousePosX[2] . 
+    "`tY: " . mousePosY[2] . 
+    "`n3rd X: " . mousePosX[3] . 
+    "`tY: " . mousePosY[3] .
+    "`n4th X: " . mousePosX[4] . 
+    "`tY: " . mousePosY[4] .
+    "`n5th X: " . mousePosX[5] . 
+    "`tY: " . mousePosY[5]
+    , "Interact Positions", "iconi"
+  }
+  Else
+  {
+    MsgBox "Please set the positions to continue", "WARNING", "icon!"
+  }
 }
 
 ESC:: Reload
