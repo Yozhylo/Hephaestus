@@ -1,4 +1,4 @@
-![version](https://img.shields.io/badge/version-0.9.0-blue)
+![version](https://img.shields.io/badge/version-1.0.0-blue)
 ![ahk-version](https://img.shields.io/badge/%3E2.0-green?logo=autohotkey&logoColor=black)
 ![license](http://www.wtfpl.net/wp-content/uploads/2012/12/wtfpl-badge-2.png)
 
