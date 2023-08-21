@@ -9,7 +9,6 @@
 
 #Requires AutoHotkey v2.0
 #SingleInstance
-TraySetIcon "icon.ico"
 
 ; Variables start
 mousePosX := []
